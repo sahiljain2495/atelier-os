@@ -1,0 +1,14 @@
+{
+  "name": "Atelier OS",
+  "short_name": "Atelier OS",
+  "description": "Voice-first founder command room for daily tasks, waiting list, and logs.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FBF7EF",
+  "theme_color": "#2B1717",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}

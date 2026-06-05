@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2B1717" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Atelier OS" />
+  <title>Atelier OS</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <div class="monogram">AO</div>
+      <nav>
+        <button class="nav active" data-filter="all">Today</button>
+        <button class="nav" data-filter="waiting">Waiting</button>
+        <button class="nav" data-filter="done">Done</button>
+        <button class="nav" data-filter="log">Log</button>
+      </nav>
+    </aside>
+
+    <main class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Founder Command Room</p>
+          <h1>Atelier OS</h1>
+          <p id="todayLabel" class="date"></p>
+        </div>
+        <div class="hero-actions">
+          <button id="exportBtn" class="ghost">Export</button>
+          <button id="rolloverBtn" class="gold">Create Tomorrow</button>
+        </div>
+      </header>
+
+      <section class="concierge">
+        <div class="orb" id="micBtn"><span>🎙</span></div>
+        <div class="command-area">
+          <label>Speak or type a command</label>
+          <textarea id="commandBox" placeholder="Add under Menswear: call Anwar Ahmed for coat fabric"></textarea>
+          <div class="command-actions">
+            <button id="runBtn">Process Command</button>
+            <button id="sampleBtn" class="ghost">Add sample list</button>
+          </div>
+          <p id="status" class="status">Ready. Voice works best in Chrome.</p>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div><span id="openCount">0</span><p>Open</p></div>
+        <div><span id="waitingCount">0</span><p>Waiting</p></div>
+        <div><span id="doneCount">0</span><p>Done Today</p></div>
+        <div><span id="categoryCount">0</span><p>Active Heads</p></div>
+      </section>
+
+      <section class="quickbar">
+        <button data-quick="Add under Waiting: follow up with Surya Da">+ Waiting</button>
+        <button data-quick="Add under Menswear: ">+ Menswear</button>
+        <button data-quick="Add under Bridal: ">+ Bridal</button>
+        <button data-quick="Add under Personal Finance: ">+ Finance</button>
+        <button data-quick="Add under Hydroponics: ">+ Farm</button>
+      </section>
+
+      <section id="board" class="board"></section>
+
+      <section id="logPanel" class="log-panel hidden">
+        <div class="section-head">
+          <div><p class="eyebrow">Chronicle</p><h2>Daily Log</h2></div>
+          <button id="clearDoneBtn" class="ghost">Archive Done From Board</button>
+        </div>
+        <div id="logList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
